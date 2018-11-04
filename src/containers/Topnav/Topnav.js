@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from "react-bootstrap"
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+
 import './Topnav.scss';
 
 export default class Topnav extends Component {
@@ -16,15 +17,15 @@ export default class Topnav extends Component {
           <Navbar>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href="#home">React-Bootstrap</a>
+                <a href="#home">Better Exchange</a>
               </Navbar.Brand>
             </Navbar.Header>
             <Nav>
               <NavItem eventKey={1} href="#">
-                Link
+                Login
               </NavItem>
               <NavItem eventKey={2} href="#">
-                Link
+                Register
               </NavItem>
               <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}>Action</MenuItem>
@@ -36,7 +37,6 @@ export default class Topnav extends Component {
             </Nav>
           </Navbar>;
         </div>
-
       </div>
     );
   }

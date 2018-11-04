@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import axios from 'axios'
+
+import Topnav from '../Topnav/Topnav'
 import './Login.scss';
-import Topnav from "src/containers/Topnav/Topnav";
 
 export default class Login extends Component {
   constructor(props) {
@@ -26,6 +28,13 @@ export default class Login extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    axios.post('http://localhost:8091/users/login', {
+      email: this.state.email,
+      password: this.state.password
+    })
+      .then(function (res) {
+        console.log(res)
+      })
   };
 
   render() {
@@ -52,7 +61,6 @@ export default class Login extends Component {
             <Button
               block
               bsSize="large"
-              disabled={!this.validateForm()}
               type="submit">
               Login
             </Button>
