@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Login from "./containers/Login/Login";
+import Login from "./components/Login/index";
 
 ReactDOM.render(<Login/>, document.getElementById('root'));
 

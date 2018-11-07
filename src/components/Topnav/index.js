@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
-import './Topnav.scss';
+import './index.scss';
 
 export default class Topnav extends Component {
   constructor(props) {
