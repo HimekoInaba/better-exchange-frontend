@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import Topnav from '../Topnav/index'
+import Topnav from '../../components/Topnav';
 
 export default class AppContainer extends Component {
     constructor(props) {
@@ -15,9 +14,7 @@ export default class AppContainer extends Component {
                     <div className="app_top_nav">
                         <Topnav/>
                     </div>
-
                 </div>
-
             </div>
         );
     }

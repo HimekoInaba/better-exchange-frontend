@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import axios from 'axios'
 
-import Topnav from '../Topnav/index'
 import './inxed.scss';
 
 export default class Login extends Component {
@@ -40,7 +39,6 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login_wrap">
-        <Topnav/>
         <div className="login">
           <form onSubmit={this.handleSubmit}>
             <FormGroup controlId="email" bsSize="large">
