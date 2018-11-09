@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import AppContainer from '../containers/AppContainer';
 import AuthContainer from "../containers/AuthContainer";
@@ -18,4 +19,8 @@ const Routes = () => (
     </BrowserRouter>
 );
 
-export default Routes;
+export default connect(state => {
+    return {
+        user: state.user,
+    };
+})(Routes);

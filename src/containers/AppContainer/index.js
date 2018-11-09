@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Topnav from '../../components/Topnav';
 import {Home} from "../../components/Home";
 import { connect } from 'react-redux'
+import {signUserActionCreator} from "../../store/actions/user";
 
 export class AppContainer extends Component {
     constructor(props) {
@@ -10,6 +11,13 @@ export class AppContainer extends Component {
         this.state = {
         }
     }
+
+    onButtonPress = () => {
+        this.props.signUser({
+            email: 'sdasd',
+            nickname: 'sdagwger',
+        });
+    };
 
     componentWillMount() {
 
@@ -26,6 +34,7 @@ export class AppContainer extends Component {
                     <div className="app_top_nav">
                         <Topnav/>
                     </div>
+                    <button onClick={this.onButtonPress}>SDsd</button>
                     <main>
                         Router goes here:
                         <Switch>
@@ -44,4 +53,10 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(AppContainer);
+function mapDispatchToProps(dispatch) {
+    return {
+        signUser: payload => dispatch(signUserActionCreator(payload)),
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
